@@ -152,19 +152,19 @@ export const getSkuByVariations = (skus, variations, skuJsonDataStruct = true) =
 }
 
 
-export const getProdutsSimiliarById = (productId) => {
+export const getProductSimiliarById = (productId) => {
 
-	getProdutsSimiliarById.cache = getProdutsSimiliarById.cache || {}
+	getProductSimiliarById.cache = getProductSimiliarById.cache || {}
 	const endpoint = `/api/catalog_system/pub/products/crossselling/similars/${productId}`;
 
 	return new Promise((resolve, reject) => {
-	  let res = getProdutsSimiliarById.cache[productId]
+	  let res = getProductSimiliarById.cache[productId]
 	  if (res) return resolve(res)
 	  else {
 		return fetch(endpoint)
 		  .then(data => {
-			getProdutsSimiliarById.cache[productId] = data.json()
-			return resolve(getProdutsSimiliarById.cache[productId])
+			getProductSimiliarById.cache[productId] = data.json()
+			return resolve(getProductSimiliarById.cache[productId])
 		  })
 		  .catch(err => reject(err))
 	  }
