@@ -1,0 +1,22 @@
+%title{
+	font-weight: bold;
+	@extend %u-uppercase;
+	&--1{
+		font-size: $f-size-xh;
+	}
+	&--2{
+		font-size: 24px;
+	}
+	&--3{
+		font-size: 20px;
+	}
+	&--4{
+		font-size: 18px;
+	}
+	&--5{
+		font-size: 16px;
+	}
+	&--6{
+		font-size: 15px;
+	}
+}

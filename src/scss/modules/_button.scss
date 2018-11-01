@@ -1,0 +1,15 @@
+.button{
+  @extend %button;
+  &--secondary {
+    @extend %button--secondary;
+  }
+  &--ghost {
+    @extend %button--ghost;
+  }
+  &--buy {
+    @extend %button--buy;
+  }
+  &--full {
+    @extend %button--full;
+  }
+}

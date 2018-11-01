@@ -1,0 +1,193 @@
+.header {
+  background-color: $c-primary;
+  min-height: 65px;
+
+  &__inner {
+    @extend %u-display-flex;
+    @extend %u-flex-justify-content-space-between;
+    @extend %u-flex-align-items-center;
+
+      padding-top: 15px;
+      padding-bottom: 15px;
+  }
+
+  &__menu {
+
+    margin-right: 10px;
+    @media screen and (min-width: $b-lg-min) {
+      order: 2;
+      width: 588px;
+      margin-right: 149px;
+    }
+
+    .btn--menu, .btn--close, .navbar__logo, .navbar__account {
+      @media screen and (min-width: $b-lg-min) {
+        display: none;
+      }
+    }
+
+    .navbar {
+      @media (max-width: $b-md-min) {
+        //display: none;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: $c-primary;
+        left: 0;
+        z-index: 999;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        display: none;
+
+        .logo svg{
+          margin: 0;
+        }
+        .menu {
+          flex-direction: column;
+          width: 100%;
+        }
+        .menu--submenu {
+          position: static;
+          margin: 0;
+        }
+        .menu__item {
+          width: 100%;
+        }
+
+        .btn--close {
+          position: absolute;
+          right: 10px;
+          color: $c-white;
+          font-size: 25px;
+        }
+
+        &.is-open {
+          display: flex;
+        }
+
+      }
+
+      &__logo {
+        padding: 10px 0;
+      }
+    }
+
+    .menu__link {
+      @extend %u-uppercase;
+      font-weight: 500;
+      font-size: 12px;
+      letter-spacing: 0.2em;
+      position: relative;
+      &:after {
+        content: '';
+        width: 0;
+        height: 1px;
+        background-color: $c-white;
+        @extend %u-display-block;
+        position: absolute;
+        bottom: 0;
+        margin-left: -25px;
+        left: 50%;
+        transition: all .3s;
+
+      }
+
+      &:hover, li:hover {
+        cursor: pointer;
+        &:after {
+          width: 50px;
+        }
+      }
+
+    }
+
+    .menu--submenu {
+      background-color: $c-primary;
+      width: 230px;
+      margin-left: -115px;
+    }
+
+
+    .menu--submenu .menu__link {
+      padding: 10px;
+      opacity: 0.65;
+      @extend %u-no-text-transform;
+      &:after {
+        display: none;
+      }
+    }
+
+    .sub {
+
+    }
+    .menu__item {
+      @extend %u-text-align-center;
+    }
+
+  }
+
+  &__logo {
+    max-width: 150px;
+    @media screen and (min-width: $b-lg-min) {
+     order: 1;
+     max-width: 250px;
+     margin-right: 160px;
+    }
+
+    @media (max-width: $b-md-min) {
+      margin-left: 10px;
+      margin-right: auto;
+      svg{
+        display: none;
+      }
+    }
+    .logo--mobile {
+      display: none;
+      @media (max-width: $b-md-min) {
+        display: flex;
+        align-items: center;
+        img:first-child {
+          height: 37px;
+          width: 37px;
+          margin-right: 10px;
+        }
+        img:last-child {
+          width: 96px;
+          height: 14px;
+        }
+      }
+    }
+  }
+  &__search, &__minicart, &__account, &__wishlist {
+    font-size: 17px;
+    color: $c-white;
+    @media screen and (min-width: $b-lg-min) {
+      order: 2;
+
+      margin: 0 5px;
+      position: relative;
+    }
+
+    @media (max-width: $b-md-min) {
+      margin-left: 10px;
+      font-size: 20px;
+    }
+  }
+
+  &__account {
+    @media (max-width: $b-md-min) {
+      display: none;
+    }
+  }
+
+  &__search {
+
+  }
+  @media (max-width: $b-md-min) {
+    position: relative;
+  }
+}

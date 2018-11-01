@@ -1,0 +1,145 @@
+$icomoon-font-family: "icomoon" !default;
+$icomoon-font-path: "/arquivos" !default;
+
+$icon-search: "\e90f";
+$icon-close: "\e910";
+$icon-menu: "\e911";
+$icon-lock: "\e912";
+$icon-truck: "\e900";
+$icon-love: "\e901";
+$icon-dark_logo: "\e902";
+$icon-low-price: "\e903";
+$icon-coupon: "\e904";
+$icon-money: "\e905";
+$icon-hanger: "\e906";
+$icon-Vector-7: "\e907";
+$icon-facebook: "\e908";
+$icon-instagram: "\e909";
+$icon-email: "\e90a";
+$icon-arrow-left: "\e90b";
+$icon-arrow-right: "\e90c";
+$icon-user: "\e90d";
+$icon-cart: "\e90e";
+
+
+@font-face {
+  font-family: '#{$icomoon-font-family}';
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot.css?onrc4t');
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot.css?onrc4t#iefix') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf.css?onrc4t') format('truetype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff.css?onrc4t') format('woff'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg.css?onrc4t##{$icomoon-font-family}') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: '#{$icomoon-font-family}' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-search {
+  &:before {
+    content: $icon-search;
+  }
+}
+.icon-close {
+  &:before {
+    content: $icon-close;
+  }
+}
+.icon-menu {
+  &:before {
+    content: $icon-menu;
+  }
+}
+.icon-lock {
+  &:before {
+    content: $icon-lock;
+  }
+}
+.icon-truck {
+  &:before {
+    content: $icon-truck;
+  }
+}
+.icon-love {
+  &:before {
+    content: $icon-love;
+  }
+}
+.icon-dark_logo {
+  &:before {
+    content: $icon-dark_logo;
+  }
+}
+.icon-low-price {
+  &:before {
+    content: $icon-low-price;
+  }
+}
+.icon-coupon {
+  &:before {
+    content: $icon-coupon;
+  }
+}
+.icon-money {
+  &:before {
+    content: $icon-money;
+  }
+}
+.icon-hanger {
+  &:before {
+    content: $icon-hanger;
+  }
+}
+.icon-Vector-7 {
+  &:before {
+    content: $icon-Vector-7;
+  }
+}
+.icon-facebook {
+  &:before {
+    content: $icon-facebook;
+  }
+}
+.icon-instagram {
+  &:before {
+    content: $icon-instagram;
+  }
+}
+.icon-email {
+  &:before {
+    content: $icon-email;
+  }
+}
+.icon-arrow-left {
+  &:before {
+    content: $icon-arrow-left;
+  }
+}
+.icon-arrow-right {
+  &:before {
+    content: $icon-arrow-right;
+  }
+}
+.icon-user {
+  &:before {
+    content: $icon-user;
+  }
+}
+.icon-cart {
+  &:before {
+    content: $icon-cart;
+  }
+}

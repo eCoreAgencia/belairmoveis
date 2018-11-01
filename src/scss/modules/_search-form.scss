@@ -1,0 +1,93 @@
+.search-form {
+  @extend %u-position-absolute;
+  top: 50%;
+  right: 0;
+  background-color: $c-primary;
+  margin-top: -25px;
+  width: 0px;
+  opacity: 0;
+  transition: all .3s;
+  &.is-open {
+    width: 775px;
+    opacity: 1;
+    .form__control {
+      @extend %u-display-flex;
+    }
+    @media (max-width: $b-md-min) {
+      width: 100%;
+      top: 0;
+      margin: 0;
+      right: 0;
+      left: 0;
+      height: 69px;
+      bottom: 0;
+
+    }
+  }
+
+
+  .form__control {
+    padding: 10px 0;
+    border-bottom: 1px solid $c-white;
+
+
+    @extend %u-display-none;
+    @media (max-width: $b-md-min) {
+      height: 69px;
+    }
+
+  }
+  .btn--close {
+    opacity: 0.5;
+  }
+  .btn--submit {
+    font-family: $f-secondary;
+    font-size: 14px;
+    @extend %u-uppercase;
+    @media (max-width: $b-md-min) {
+      font-size: 0;
+    }
+    i {
+      margin-left: 10px;
+      font-size: 17px;
+    }
+  }
+
+  .input {
+    background-color: transparent;
+    border: none;
+    font-size: 16px;
+    @extend %u-uppercase;
+    flex-basis: 70%;
+    margin-left: 0;
+    margin-right: auto;
+    color: $c-white;
+    letter-spacing: 0.2em;
+    opacity: 0.8;
+    @include input-placeholder {
+      color: $c-white;
+      @media (max-width: $b-md-min) {
+        font-size: 0;
+      }
+    }
+  }
+
+
+
+}
+
+.form {
+  &__control {
+    &--inline {
+      @extend %u-display-flex;
+      @extend %u-flex-align-items-center;
+      @extend %u-flex-justify-content-space-between;
+    }
+  }
+
+  .input {
+    padding: 5px 8px;
+  }
+
+
+}

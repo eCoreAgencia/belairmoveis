@@ -1,0 +1,31 @@
+%button {
+  color: $c-white;
+  font-size: $f-size-md;
+  font-weight: bold;
+  @extend %u-text-align-center;
+  text-decoration: none;
+  @extend %u-uppercase;
+  background: $c-primary;
+  padding: 13px 26px;
+  appearance: none;
+  cursor: pointer;
+  //font-family ??
+  //border-radius ??
+  &--secondary {
+    color: $c-primary;
+    border: 1px solid $c-primary;
+    background: $c-white;
+  }
+  &--ghost {
+    color: $c-white;
+    border: 1px solid $c-white;
+    background: none;
+  }
+  &--buy {
+    font-size: $f-size-lg;
+  }
+  &--full {
+    width: 100%;
+    flex: 1 0 100%;
+  }
+}

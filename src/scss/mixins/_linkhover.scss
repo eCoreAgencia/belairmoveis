@@ -1,0 +1,15 @@
+@mixin linkhover {
+  //tablet and below
+  @media screen and (max-width: $b-md-max) {
+    &:active{
+      color: $c-primary;
+    }
+  }
+
+  //desktop
+  @media screen and (min-width: $b-lg-min) {
+    &:hover{
+      color: $c-primary;
+    }
+  }
+}

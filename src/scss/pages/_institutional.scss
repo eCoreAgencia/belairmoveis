@@ -1,0 +1,55 @@
+.institutional {
+  &__text {
+    .title {
+      font-size: 12px;
+      text-transform: none;
+      margin-bottom: 5px;
+    }
+
+    p {
+      & + .title {
+        margin-top: 20px;
+      }
+      font-size: 12px;
+      font-weight: 300;
+      line-height: 1.5;
+    }
+  }
+
+  &__title {
+    font-size: 24px;
+    text-align: center;
+    letter-spacing: 0.2em;
+    font-family: $f-secondary;
+    text-transform: uppercase;
+    font-weight: normal;
+  }
+
+  .menu--institutional {
+    margin-top: 30px;
+    padding: 10px;
+
+    .menu__link {
+      font-size: 10px;
+      text-align: center;
+      letter-spacing: 0.1em;
+      color: #333333;
+      font-weight: normal;
+      text-transform: uppercase;
+      border: 1px solid #333;
+      padding: 8px 10px;
+      min-width: 168px;
+      &:hover, &.is-active {
+        background-color: #333333;
+        color: $c-white;
+      }
+
+    }
+  }
+
+  .section--institutional {
+    .container {
+      width: 955px;
+    }
+  }
+}

@@ -1,0 +1,62 @@
+include ../helpers.pug
+
+if (global.process.env.NODE_ENV === 'production')
+  - var title = '$product.HtmlEscapedName'
+  - var href = '$product.Uri'
+  - var dataProductId = '$product.Id'
+  - var listPrice = '$product.ListPrice'
+  - var bestPrice = '$product.BestPrice'
+  - var flags = '$product.HightLight'
+  - var getImageTag = '$product.GetImageTag(2)'
+  - var getImageTag2 = '$product.GetImageTag(2)'
+  - var categoryName = '+ $product.CategoryName'
+  - var categoryHref = '$product.CategoryLink'
+
+else
+  - var title = 'Nome do produto'
+  - var href = '/produto.html'
+  - var dataProductId = Math.floor(Math.random() * 9999999)
+  - var listPrice = 'R$ 299,99'
+  - var bestPrice = 'R$ 199,99'
+  - var flags = '<p class="flag destaque">destaque</p>'
+  - var getImageTag = '<img src="https://casaegaragem.vteximg.com.br/arquivos/ids/155449-305-397/aparador-de-grama-black-decker-500w-gl300p-principal.jpg?v=636688094892030000" width="305" height="397" />'
+  - var getImageTag2 = '<img src="http://via.placeholder.com/279x365" width="279" height="365" />'
+  - var categoryName = '+ Iluminação'
+  - var categoryHref = '/category.html'
+
+.product.product--shelf
+  span.product__id(data-product-id= dataProductId)
+  .product__header
+    .product__media
+      a.product__link(href= href)
+        != getImageTag
+
+  .product__reviews
+  .product__info
+    h3.product__name
+      a.product__link(title= title, href= href)= title
+    .product__price
+      if ( global.process.env.NODE_ENV === 'production' )
+        != '\n#if ($product.IsInStock)'
+        != '\n  <div class="price">'
+        != '\n    #if ($product.HasBestPrice)'
+        != '\n      <span class="price__best"> Aluguel' + bestPrice + '</span>'
+        != '\n      <span class="price__list"> Na Loja' + listPrice + '</span>'
+        != '\n    #else'
+        != '\n      <span class="price__best">' + listPrice + '</span>'
+        != '\n    #end'
+        != '\n    #if ($product.NumbersOfInstallment > 1)'
+        != '\n      <span class="price__instament">'
+        != '\n        ${product.NumbersOfInstallment}X ${product.InstallmentValue} sem juros'
+        != '\n      </span>'
+        != '\n    #end'
+        != '\n  </div>'
+        != '\n#else'
+        != '\n  <span class="product__unavailable>Indisponível</span>"'
+        != '\n#end\n'
+      else
+        .price
+          span.price__best R$ 500,00
+          span.price__list R$ 500,00
+          span.price__instament 12x R$ 13,24 sem juros
+

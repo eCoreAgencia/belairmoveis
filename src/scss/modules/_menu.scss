@@ -1,0 +1,32 @@
+.menu {
+  $this: &;
+  @extend %u-display-flex;
+  @extend %u-flex-justify-content-space-between;
+
+  &--submenu {
+    @extend %u-position-absolute;
+    @extend %u-flex-direction-column;
+    width: 100%;
+    left: 50%;
+    @extend %u-display-none;
+    z-index: 20;
+
+    #{$this}__item:hover & {
+      @extend %u-display-flex;
+    }
+  }
+
+  &__item {
+    font-size: 14px;
+    @extend %u-position-relative;
+  }
+
+  &__link {
+    color: $c-white;
+    padding: 20px 0;
+    @extend %u-display-block;
+
+
+
+  }
+}

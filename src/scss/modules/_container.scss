@@ -1,0 +1,14 @@
+//contains with max width
+.container {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  max-width: #{$g-max-width + ($g-spacing * 2)};
+  padding-right: $g-spacing;
+  padding-left: $g-spacing;
+  //TODO: check the need for viewports smaller than lg-min
+
+  &--no-gutter {
+    padding: 0;
+  }
+}

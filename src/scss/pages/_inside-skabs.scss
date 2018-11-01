@@ -1,0 +1,126 @@
+.profile {
+  margin-top: 50px;
+  &__card {
+    width: 305px;
+    height: 450px;
+    background: #fff;
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.15);
+    padding: 20px;
+    margin: 20px;
+  }
+
+  &__name {
+    font-family: $f-secondary;
+    font-size: 20px;
+    text-align: center;
+    font-weight: 400;
+    margin: 20px 0;
+  }
+
+  &__header {
+    a {
+      display: block;
+      width: 245px;
+      margin: 0 auto;
+      border-radius:50%;
+      height: 245px;
+      overflow: hidden;
+    }
+  }
+
+  &__description {
+    text-align: center;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 1.2;
+    min-height: 68px;
+  }
+
+  &__link {
+    font-size: 12px;
+    font-weight: 500;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    svg {
+      margin-right: 10px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.skab-tab {
+  padding: 20px;
+  margin: 10px;
+}
+
+.tab {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__item {
+    padding: 10px;
+    opacity: 0.3;
+    font-size: 28px;
+    letter-spacing: 0.1em;
+    font-family: $f-secondary;
+    position: relative;
+    &::after {
+      content: '';
+      width: 0;
+      height: 2px;
+      background-color: #333;
+      position: absolute;
+      bottom: 0;
+      margin-left: -25px;
+      left: 50%;
+      -webkit-transition: all .3s;
+      -o-transition: all .3s;
+      transition: all .3s;
+    }
+    &:hover {
+      cursor: pointer;
+      opacity: 1;
+
+      &:after {
+        width: 50px;
+      }
+    }
+  }
+}
+
+
+.skabs {
+  &-profile {
+    .section__skabs {
+      padding: 0;
+      height: auto;
+      margin-bottom: 20px;
+    }
+  }
+
+  .profile {
+    margin: 0;
+    padding: 20px;
+  }
+
+  .profile__image {
+    width: 169px;
+    height: 169px;
+    border-radius: 50%;
+  }
+
+  .profile__main {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+}

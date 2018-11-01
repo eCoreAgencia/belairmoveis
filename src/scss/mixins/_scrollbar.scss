@@ -1,0 +1,18 @@
+@mixin scrollbar{
+  //custom webkit scrollbar
+  // more samples at https://codepen.io/devstreak/pen/dMYgeO
+  &::-webkit-scrollbar-track{
+    border: none;
+    background-color: $c-white;
+  }
+
+  &::-webkit-scrollbar{
+    width: 4px;
+//    height: 4px;
+    background-color: $c-white;
+  }
+
+  &::-webkit-scrollbar-thumb{
+    background-color: $c-primary;
+  }
+}

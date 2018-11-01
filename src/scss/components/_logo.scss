@@ -1,0 +1,10 @@
+.logo {
+  @extend %u-display-flex;
+  @extend %u-flex-align-items-center;
+  @extend %u-flex-justify-content-space-between;
+
+  svg:first-child {
+    margin-right: 15px;
+  }
+
+}

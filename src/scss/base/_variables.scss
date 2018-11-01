@@ -1,0 +1,117 @@
+// =========================================================
+//
+//  PROJECT SCSS VARIABLES
+//  ---------
+//
+//  Pay attention on prefixes when adding new variables
+//
+//  Colors: $c-
+//  Fonts: $f-
+//  Breakpoint: $b-
+//  Space (margin and padding): $s-
+//  Transition: $t-
+//
+//  Sizes:
+//  xs: extra small
+//  sm: small
+//  md: medium
+//  lg: large
+//  xl: extra large
+//  hg: huge
+//  xh: extra huge
+//
+// =========================================================
+
+
+//breakpoint
+$b-sm-min: 320px;//mobile min
+$b-sm-max: 767px;//mobile max
+$b-md-min: 768px;//tablet min
+$b-md-max: 1024px;//tablet max
+$b-lg-min: 1025px;//desktop min
+$b-lg-max: 1366px;//desktop max
+
+
+//color
+$c-black: #000;
+$c-white: #fff;
+$c-error: #f00;
+$c-gray: #ddd;
+$c-gray-dark: #474747;
+$c-gray-light: #f1f1f1;
+$c-gray-lighter: #e1e5e6;
+$c-primary: #333;
+$c-secondary: #131d63;
+
+
+//font
+
+$f-primary: 'Roboto';
+$f-secondary: 'Oswald';
+$f-base: $f-primary, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+$f-color: $c-black;
+$f-size-xs: 10px;
+$f-size-sm: 12px;
+$f-size-md: 14px;
+$f-size-sd: 16px;
+$f-size-lg: 18px;
+$f-size-xl: 36px;
+$f-size-hg: 48px;
+$f-size-xh: 72px;
+$f-size: $f-size-md;
+
+
+//space
+$s-xs: 5px;
+$s-sm: 10px;
+$s-md: 20px;
+$s-lg: 30px;
+$s-xl: 40px;
+$s-hg: 50px;
+$s-xh: 60px;
+
+
+//grid
+$grid: 12;
+$g-max-width: 1260px;
+$g-spacing: $s-sm;
+
+
+//transition
+$t-fast: 0.1s;
+$t-normal: 0.3s;
+$t-slow: 0.6s;
+$t: all $t-normal linear;
+
+
+// flex grid variable
+
+$grid-name: "column";
+$grid-hidden-name: "hidden";
+$grid-opacity-name: "opacity";
+$absolute-name: "absolute";
+$relative-name: "relative";
+$margin-name: "margin";
+$padding-name: "padding";
+$grid-container-name: "container";
+
+$grid-columns:               12 !default;
+$grid-gutter-width:          20px !default;
+
+
+//grid media queries
+$screen-xs:                  0px !default;
+$screen-sm:                  768px !default;
+$screen-md:                  1024px !default;
+$screen-lg:                  1279px !default;
+$screen-xl:                  1366px !default;
+
+
+//flex container
+$container-media-list: (
+    xs: 540px,
+    sm: 720px,
+    md: 960px,
+    lg: 1140px,
+    xl: 1366px
+);

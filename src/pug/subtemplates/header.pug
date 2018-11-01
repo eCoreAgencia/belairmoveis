@@ -1,0 +1,80 @@
+include ../helpers.pug
+
+header.header
+  .container
+    .header__inner
+      .header__menu
+        button.btn.btn--menu
+          i.icon-menu
+        nav.navbar
+          button.btn.btn--close
+            i.icon-close
+          .navbar__logo
+            .logo
+              include ../../svg/dark_logo_transparent-2.svg
+          .navbar__account
+            a(href='/account') Entrar
+          ul.menu.menu--principal
+            li.menu__item
+              a.menu__link Quem Somos
+            li.menu__item
+              a.menu__link Inside Skabs
+            li.menu__item
+              a.menu__link Vestidos
+              ul.menu.menu--submenu
+                li.menu__item
+                  a.menu__link Nossa Coleção
+                li.menu__item
+                  a.menu__link Designers
+                li.menu__item
+                  a.menu__link Novidades
+                li.menu__item
+                  a.menu__link Brigde to be
+                li.menu__item
+                  a.menu__link Populares
+
+
+            li.menu__item
+              a.menu__link Anunciar
+            li.menu__item
+              a.menu__link Ajuda
+      .header__logo
+        include ../components/logo.pug
+        .logo--mobile
+          img(src="/arquivos/logo_transparent.png", alt="")/
+          img(src="/arquivos/dark_logo_transparent.png", alt="")/
+      .header__search
+        button.btn.btn--search
+          i.icon-search
+        .search-form
+          form.form(action="/busca")
+            .form__control.form__control--inline
+              button.btn.btn--close
+                i.icon-close
+              input.input(type="text", required='required', autocomplete='off', placeholder='O que está buscando?', onfocus="this.placeholder = ''", onblur="this.placeholder = 'Digite o nome do produto...'")/
+              button.btn.btn--submit
+                |  buscar
+                i.icon-search
+      .header__wishlist
+        ul.menu.menu--header
+          li.menu__item
+            a.btn.btn--wishlis
+              i.icon-love
+            ul.menu.menu--submenu
+              li.menu__item
+                a.menu__link(href="")
+                  |  Lista de Desejos
+      .header__account
+        ul.menu.menu--header
+          li.menu__item
+            a.btn.btn--account
+              i.icon-user
+            ul.menu.menu--submenu
+              li.menu__item
+                a.menu__link(href="")
+                  |  Minha conta
+              li.menu__item
+                a.menu__link(href="")
+                  |  Meus Pedidos
+      .header__minicart
+        .js-minicart

@@ -1,0 +1,22 @@
+.empty-search {
+  &__content {
+    text-align: center;
+    padding: 90px 30px;
+
+  }
+
+  &__word {
+    font-size: 36px;
+    font-weight: 300;
+    margin-bottom: 30px;
+    display: block;
+  }
+
+  &__subtitle, &__title{
+    font-size: 18px;
+    color: #333333;
+    margin: 20px 0;
+    display: block;
+    font-weight: 300;
+  }
+}

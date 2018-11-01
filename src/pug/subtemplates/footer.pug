@@ -1,0 +1,43 @@
+include ../helpers.pug
+
+footer.footer
+  .footer__inner.container
+    .footer__logo
+      .logo
+        include ../../svg/dark_logo_transparent-2.svg
+    .footer__newsletter
+      .newsletter
+        form.newsletter__form(action="")
+          .newsletter__form-control
+            i.icon-email
+            input.newsletter__input#email(type="text", name="email")/
+            button.btn.btn--submit Cadastrar
+    .footer__menu
+      ul.menu.menu--principal
+        li.menu__item
+          a.menu__link Fale Conosco
+        li.menu__item
+          a.menu__link Quem Somos
+        li.menu__item
+          a.menu__link Política de Privacidade
+        li.menu__item
+          a.menu__link Termos e Condições
+    .footer__social-media
+      .social-media
+        span.social-media__text Join Us Social Media
+        ul.social-media__list
+          li.social-media__item
+            a(href="http://")
+              .social-media__icon
+                i.icon-facebook
+              | Facebook
+          li.social-media__item
+            a(href="http://")
+              .social-media__icon
+                i.icon-instagram
+              | Instagram
+    .footer__copyright
+      span.copyright SKAB COMÉRCIO DE ROUPA LTDA.  ENDEREÇO - SÃO PAULO/SP - CNPJ: 99.999.999/0009-99
+      span.security
+        include ../../svg/security.svg
+

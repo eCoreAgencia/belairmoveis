@@ -1,0 +1,20 @@
+.error {
+  &__content {
+    text-align: center;
+    padding: 90px 30px;
+
+  }
+
+  &__title {
+    font-family: $f-secondary;
+    font-size: 72px;
+    letter-spacing: 0.2em;
+    font-weight: 300;
+    margin-bottom: 30px;
+  }
+
+  &__subtitle {
+    font-size: 18px;
+    color: #333333;
+  }
+}

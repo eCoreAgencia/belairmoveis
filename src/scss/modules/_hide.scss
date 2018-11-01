@@ -1,0 +1,14 @@
+.hide {
+	//mobile
+	@media screen and (max-width: $b-sm-max) {
+		&--sm { display: none !important; }
+	}
+	//tablet
+	@media screen and (min-width: $b-md-min) and (max-width: $b-md-max) {
+		&--md { display: none !important; }
+	}
+	//desktop
+	@media screen and (min-width: $b-lg-min) {
+		&--lg { display: none !important; }
+	}
+}

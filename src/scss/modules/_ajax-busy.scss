@@ -1,0 +1,32 @@
+#ajaxBusy {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0;
+  height: 15px;
+  width: 100%;
+  background: linear-gradient(90deg, $c-secondary, $c-white);
+  background-size: 400% 400%;
+  -webkit-animation: horizontalGradient 1s ease infinite;
+  -moz-animation: horizontalGradient 1s ease infinite;
+  animation: horizontalGradient 1s ease infinite;
+
+  p { display: none; }
+}
+
+@-webkit-keyframes horizontalGradient {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes horizontalGradient {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes horizontalGradient {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}

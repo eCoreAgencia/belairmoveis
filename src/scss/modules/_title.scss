@@ -1,0 +1,21 @@
+.title{
+	@extend %title;
+}
+h1.title{
+	@extend %title--1;	
+}
+h2.title{
+	@extend %title--2;	
+}
+h3.title{
+	@extend %title--3;	
+}
+h4.title{
+	@extend %title--4;	
+}
+h5.title{
+	@extend %title--5;	
+}
+h6.title{
+	@extend %title--6;	
+}
